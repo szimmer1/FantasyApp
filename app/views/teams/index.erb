@@ -1,0 +1,8 @@
+<div class="container">
+	<h1>NFL Teams</h1>
+	<ul>
+		<% @teams.each do |team| %>
+			<li><%= link_to "#{team['name']} (#{team['abrv']})", team_path(team) %></li>
+		<% end %>	
+	</ul>
+</div>

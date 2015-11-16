@@ -1,0 +1,9 @@
+<div class="container">
+	<h1><%= @team['name'] %> <small><%= @team['abrv'] %></small></h1>
+	<h4>Players</h4>
+	<ul>
+		<% @team.player.each do |player| %>
+		<li><%= link_to "#{player['name']}", player_path(player) %> <%= player['position'] %></li>
+		<% end %>
+	</ul>
+</div>		
